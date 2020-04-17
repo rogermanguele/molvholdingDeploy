@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Molv Holding S.A.</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" src="img/logo/MOLV_Logo.jpg"
+          alt="Logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#qsomos">Sobre</a></li>
+        <li><a href="#gallery">Produtos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a class="modal-trigger" target="modal1" href="#modal1">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#qsomos">Sobre</a></li>
+        <li><a href="#gallery">Produtos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a class=" modal-trigger" target="modal1" href="#modal1">Login</a></li>
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons purple-text">menu</i></a>
+    </div>
+  </nav>
+  </div>
+
+  {{{body}}}
+  <!--Footer-->
+
+  <footer class="page-footer purple">
+    <div class="container">
+      <div class="row">
+        <div id="sobrenos" class="col l6 s12">
+          <h5 class="white-text">Sobre Nós</h5>
+          <p class="grey-text ">Molv Holding S.A, é uma empresa com experiência comprovada no serviço de provimento de
+            equioamentos e serviços nas àreas de Suply Chain, Petróleo e gàs, Bancos e de mais ramos industriais.Somos
+            focados primeiramente em providenciar melhores serviços aos nossos clientes, principio este que é levado a
+            cabo por todos membros da empresa.</p>
+
+
+        </div>
+        <div id="servicos" class="col l3 s12">
+          <h5 class="white-text">Serviços Adicionais</h5>
+          <ul>
+            <li><a class="grey-text" href="#!">Molv Car Rent</a></li>
+            <li><a class="grey-text" href="#!">Molv Call Centers</a></li>
+            <li><a class="grey-text" href="#!">Molv Outsourcing</a></li>
+          </ul>
+        </div>
+        <div id="social" class="col l3 s12">
+          <h5 class="white-text">Conecte se</h5>
+          <ul>
+            <li><a class="grey-text" href="#!">Facebook</a></li>
+            <li><a class="grey-text" href="https://www.instagram.com/molvholding/" target="blank">Instagram</a></li>
+            <li><a class="grey-text" href="https://www.linkedin.com/in/molv-holding-s-a-6011991a7/"
+                target="blank">Linkedin</a></li>
+            <li><a class="grey-text" href="#!">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Criado por: <a class="brown-text text-lighten-3" href="#">Rogerio Manguele [rogermanguele@gmail.com]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.min.js"></script>
+  <script src="/js/init.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#sidenav").sideNav({
+        menuWidth: 200,
+        edge: 'left',
+        closeOnClik: true
+      });
+
+    });
+  
+    <!--Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+      $(function () {
+        $(".button-collapse").sideNav();
+    });
+
+    M.AutoInit();
+
+    // Modals Initialization
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+    });
+
+
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
+
+    //navbar animation
+    window.sr = ScrollReveal();
+    sr.reveal('.brand-logo', {
+        duration: 2000,
+      origin: 'left'
+    });
+
+    sr.reveal('.right', {
+        duration: 2000,
+      origin: 'bottom'
+    });
+
+    sr.reveal('#section-bq', {
+        duration: 2000,
+      origin: 'top',
+      distance: '300px'
+
+    });
+    sr.reveal('#big-text', {
+        duration: 2000,
+      delay: 2000,
+      origin: 'top',
+      distance: '100px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#molv-txt-header', {
+        duration: 2000,
+      origin: 'top',
+      distance: '100px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#btn-proposta', {
+        duration: 2000,
+      origin: 'bottom',
+      delay: 2000,
+      distance: '100px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#qsomos', {
+        duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#cometimento', {
+        duration: 2000,
+      origin: 'bottom',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#nfoco', {
+        duration: 2000,
+      origin: 'center',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#contactenos', {
+        duration: 2000,
+      origin: 'bottom',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#endereco', {
+        duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#colection-add', {
+        duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#frmemail', {
+        duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#gallery', {
+        duration: 2000,
+      origin: 'bottom',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#sobrenos', {
+        duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#servicos', {
+        duration: 2000,
+      origin: 'bottom',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    sr.reveal('#social', {
+        duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+    function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4000);
+    }    
+    setTimeout(autoplay, 4000);
+
+    $(document).ready(function() {
+    $('input#input_text, textarea#message').characterCounter();
+    });
+  </script>
+  
+</body>
+
+</html>

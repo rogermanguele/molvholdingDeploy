@@ -1,0 +1,48 @@
+<div class="container">
+    {{msg}}
+    <form method="POST" action="send">
+         <div class="row">
+            <div class="input-field col m12">
+                <i class="material-icons prefix">flag</i>
+                <input type="text" id="assunto" name="assunto">
+                <label for="assunto">Assunto</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <i class="material-icons prefix">email</i>
+                <input type="text" id="nome" name="nome">
+                <label for="nome">Nome</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <i class="material-icons prefix">call</i>
+                <input type="number" id="telefone" name="telefone">
+                <label for="telefone">Telefone</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <i class="material-icons prefix">email</i>
+                <input type="email" id="email" name="email" class="validate">
+                <label for="email" data-error="invalid email address" datasuccess="Thank you!">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <i class="material-icons prefix">edit</i>
+                <input type="text" id="mensagem" name="mensagem">
+                <label for="mensagem">Mensagem</label>
+
+            </div>
+            <div class="row">
+                <button class="btn btn-large pull-s6" type="submit">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</footer>
