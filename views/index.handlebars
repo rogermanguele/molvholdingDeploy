@@ -231,24 +231,27 @@
                         <h5 class="white-text">Envie seu email aqui</h5>
                         <div class="input-field">
                             <i class="material-icons prefix">person</i>
-                            <input placeholder="Seu Nome" name="nome" id="nome" type="text">
+                            <input placeholder="Seu Nome" name="nome" id="nome" type="text"
+                             maxlength="35" required="required">
                             <label for="nome">Nome</label>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">email</i>
-                            <input placeholder="Email" name="email" id="email" type="email" class="validate">
+                            <input placeholder="Email" name="email" id="email" type="email" class="validate"
+                             maxlength="35" required="required">
                             <label for="email">E-mail</label>
-                            <span class="helper-text" data-error="Email Errado, verifique sff"></span>
+                            <span class="helper-text" data-error="Email invalido, verifique sff"></span>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">call</i>
-                            <input placeholder="Telefone" name="telefone" id="telefone" type="number">
+                            <input placeholder="Telefone" name="telefone" id="telefone" type="number"
+                             maxlength="15" required="required">
                             <label for="telefone">Telefone</label>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">edit</i>
                             <textarea placeholder="Sua mensagem aqui" id="mensagem" class="message materialize-textarea"
-                                name="mensagem"></textarea>
+                                name="mensagem"  maxlength="120" required="required"></textarea>
                             <label for="mensagem">Mensagem</label>
                         </div>
                         <button class="button btn  waves-effect purple white-text" type="submit">Submeter</button>
@@ -313,43 +316,48 @@
     <div class="modal-content">
         <h5 class="text center-align">Solicitação De Serviço</h5>
         <br>
-        <form method="POST" action="sendServiceRequest">
+        <form id="frmMolvServiceRequest" method="POST" action="sendServiceRequest">
 
             <div class="row">
                 <div class="col s12 m5 input-field">
                     <i class="material-icons prefix">person</i>
-                    <input type="text" name="nome" id="nome" placeholder="Informe seu nome" />
+                    <input type="text" name="nome" id="nome" placeholder="Informe seu nome"  maxlength="35" required="required" />
                     <label for="nome">Nome</label>
                 </div>
                 <div class="col s12 m6 input-field">
                     <i class="material-icons prefix">home</i>
-                    <input type="text" name="empresa" id="empresa" placeholder="Informe o nome da sua empresa" />
+                    <input type="text" name="empresa" id="empresa" placeholder="Informe o nome da sua empresa" 
+                     maxlength="50" required="required" />
                     <label for="empresa">Empresa</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 m5 input-field">
                     <i class="material-icons prefix">build</i>
-                    <input type="text" name="area" id="area" placeholder="Informe area de atuação da sua empresa" />
+                    <input type="text" name="area" id="area" placeholder="Informe area de atuação da sua empresa"
+                     maxlength="35" required="required" />
                     <label for="area">Area atuação</label>
                 </div>
                 <div class="col s12 m6 input-field">
                     <i class="material-icons prefix">room</i>
-                    <input type="text" name="adress" id="adress" placeholder="Please enter a Lastname" />
+                    <input type="text" name="adress" id="adress" placeholder="Please enter a Lastname" 
+                     maxlength="35" required="required"/>
                     <label for="adress">Last Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 m5 input-field">
                     <i class="material-icons prefix">email</i>
-                    <input placeholder="Email" id="email" name="email" type="email" class="validate">
+                    <input placeholder="Email" id="email" name="email" type="email" class="validate"
+                     maxlength="35" required="required">
                     <label for="email">E-mail</label>
-                    <span class="helper-text" data-error="Email Errado, verifique sff"></span>
+                    <span class="helper-text" data-error="Email invalido, verifique sff"></span>
 
                 </div>
                 <div class="col s12 m6 input-field">
                     <i class="material-icons prefix">call</i>
-                    <input placeholder="Telefone" name="telefone" id="telefone" type="number">
+                    <input placeholder="Telefone" name="telefone" id="telefone" type="number"
+                     maxlength="15" required="required">
                     <label for="telefone">Telefone</label>
                 </div>
             </div>
@@ -357,7 +365,7 @@
                 <div class="col s12 m11 input-field">
                     <i class="material-icons prefix">edit</i>
                     <textarea placeholder="Detalhe sobre o serviço" id="message" class="materialize-textarea"
-                        name="message" data-length="120"></textarea>
+                        name="message" maxlength="160" required="required"></textarea>
                     <label for="message">Descrição</label>
                 </div>
             </div>

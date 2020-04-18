@@ -30,8 +30,14 @@ app.get('/', (req, res) => {
     });
 });
 
+//Thnks for your email
+app.get('/thank-you', (req, res)=>{
+    res.render('thankyou', {layout:'thanks'} );
+});
 //Email sending functionalities for MolV Contact Form
+
 app.post('/send', (req, res) => {
+    
     const output = `
         <h3>Detalhes de contacto</h3>
         <ul>
@@ -42,19 +48,21 @@ app.post('/send', (req, res) => {
         <h3>Mensagem</h3>
         <p> ${req.body.mensagem}</p>
     `;
+    const email =` ${req.body.email}`;
     let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: "host02.ciuem.mz",
+        //port: 25,
+        //secure: true, // true for 465, false for other ports
         auth: {
-            user: 'rogermanguele@gmail.com', // generated ethereal user
-            pass: 'babulayza' // generated ethereal password
+            user: 'comercial@molvholding.co.mz', // generated ethereal user
+            pass: 'X0T4KSLg929a' // generated ethereal password
         }
     });
-
+    //var email=${req.body.email},
     // send mail with defined transport object
     let mailOptions = {
-        from: '"Pedido de info via Site" <rogermanguele@gmail.com>', // sender address
+       
+        from: 'De Manguele '+ email, // sender address
         to: "comercial@molvholding.co.mz", // list of receivers
         subject: "MOLV CONTACT FORM", // Subject line
         html: output // html body
@@ -68,10 +76,8 @@ app.post('/send', (req, res) => {
 
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.render('index', {
-            msg: 'Mensagem enviada',
-            layout: 'main'
-        })
+        res.redirect('/thank-you');
+        
     });
 
 
@@ -94,18 +100,19 @@ app.post('/sendServiceRequest', (req, res) => {
         <p> ${req.body.message}</p>
     `;
     let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        host: "host02.ciuem.mz",
+        //port: 587,
+        secure: true, // true for 465, false for other ports
         auth: {
-            user: 'rogermanguele@gmail.com', // generated ethereal user
-            pass: 'babulayza' // generated ethereal password
+            user: 'comercial@molvholding.co.mz', // generated ethereal user
+            pass: 'X0T4KSLg929a' // generated ethereal password
         }
     });
 
     // send mail with defined transport object
     let mailOptions = {
-        from: '"Pedido via Site" <rogermanguele@gmail.com>', // sender address
+        const :email = `${req.body.email}`,
+        from:email, // sender address
         to: "comercial@molvholding.co.mz", // list of receivers
         subject: "Solicitação de serviço", // Subject line
         html: output // html body
@@ -119,10 +126,7 @@ app.post('/sendServiceRequest', (req, res) => {
 
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.render('index', {
-            msg: 'Mensagem enviada',
-            layout: 'main'
-        })
+        res.redirect('/than-kyou')
     });
 
 
