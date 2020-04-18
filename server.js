@@ -126,7 +126,7 @@ app.post('/sendServiceRequest', (req, res) => {
 
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.redirect('/thank-kyou')
+        res.redirect('/thank-you')
     });
 
 
